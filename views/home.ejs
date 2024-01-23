@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs') %>
+<div class="div1">
+    <div class="div2">
+        <p class="blog-website" id="blog-website">Blog Website</p>
+        <div class="div3">
+            <div class="div4">
+                <% if (locals.data) { %>
+                    <% locals.data.forEach((post) => { %>
+                        <div class="div-post">
+                            <form action="/delete/<%= post._id %>" method="POST">
+                                <button class="close-icon-btn btn" type="submit">
+                                    <iconify-icon class="close-icon" icon="material-symbols:close"></iconify-icon>
+                                </button>
+                                <h3 class="div-post-h3">
+                                    <%= post.title %>
+                                </h3>
+                                <p class="div-post-para">
+                                    <%= post.para %>
+                                </p>
+                                <a class="edit-icon-btn btn" href="/update/<%= post._id %>" role="button">
+                                    <iconify-icon icon="ic:baseline-edit"></iconify-icon>
+                                </a>
+                            </form>
+                        </div>
+                    <% }) %>
+                    
+                <% } %>
+            </div>
+        </div>
+        <div class="" id="div-create-post">
+            <a class="btn " id="post-btn" href="/post" role="button">+&nbsp;Create Post</a>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer.ejs') %>
