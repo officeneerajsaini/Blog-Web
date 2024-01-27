@@ -1,6 +1,5 @@
 body {
-
-    background-color: #51b6e93d;
+    background-color: #6DA4AA;
 }
 
 #div-create-post {
@@ -28,11 +27,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    width: 320px;
 }
 
 .form {
-    background: #383bcf86;
+    background:#c2e7ff;
     padding: 40px;
     border-radius: 9px;
 }
@@ -40,7 +39,7 @@ body {
 #post-heading {
     font-size: 22px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     color: #000000;
 }
 
@@ -48,32 +47,30 @@ body {
     display: flex;
     margin: auto;
     border-radius: 8px;
-    color: #0800ff;
-    background-color: #ffffff;
-    border-color: #007bff;
+    color: white;
+    /* border-color: #007bff; */
     /* background-color: #5272F2; */
 }
-#edit-btn {
+#create-post-btn {
+    /* background-color: #ffffff; */
+}
+.div3{
     display: flex;
-    margin: auto;
-    border-radius: 8px;
-    color: #0800ff;
-    background-color: #ffffff;
-    border-color: #007bff;
+    justify-content: center;
 }
 .div4 {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
     justify-content: space-evenly;
 }
 
 .div-post {
     /* border: 1px solid rgba(0, 0, 0, 0.267); */
-    background: #4B9CD3;
-    padding: 10px;
-    width: 300px;
+    background: #c2e7ff;
+    padding: 20px;
+    width: 700px;
     border-radius: 9px;
-    margin: 10px;
+    margin: 6px;
     text-align: center;
     color: #0F1035
     /* box-shadow: 0 0 20px rgb(15 16 17 / 62%); */
@@ -86,15 +83,28 @@ body {
 .close-icon-btn {
     /* display: flex; */
     /* float: right; */
-    position: relative;
+    /* position: relative;
     left: 132px;
-    bottom: 15px;
-    color: rgb(51, 50, 50);
+    bottom: 15px; */
+    /* color: rgb(255, 255, 255); */
     /* background-color: #86A7FC; */
-    border-radius: 10px;
-    font-size: 25px;
+    /* border-radius: 10px; */
+    /* font-size: 20px; */
+    margin-right: 5px;
+}
+.edit-icon-btn{
+    margin-left: 5px;
 }
 
+#edit-btn {
+    display: flex;
+    margin: auto;
+    border-radius: 8px;
+    /* color: #0800ff; */
+    /* background-color: #ffffff; */
+    /* border-color: #007bff; */
+    
+}
 #blog-website {
     font-family: "Open Sans", sans-serif;
     text-align: center;
@@ -106,4 +116,22 @@ body {
 
 .label {
     color: #000000;
+}
+
+.button{
+    border-radius: 5px;
+}
+
+.footer-div{
+    background-color: black;
+    color: #6DA4AA;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    position: static;
+    bottom: 0;
+    width: -webkit-fill-available;
+}
+.footer-p{
+    margin: 0px;
 }

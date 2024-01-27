@@ -7,19 +7,21 @@
                 <% if (locals.data) { %>
                     <% locals.data.forEach((post) => { %>
                         <div class="div-post">
-                            <form action="/delete/<%= post._id %>" method="POST">
-                                <button class="close-icon-btn btn" type="submit">
-                                    <iconify-icon class="close-icon" icon="material-symbols:close"></iconify-icon>
-                                </button>
+                            <form  method="POST">
                                 <h3 class="div-post-h3">
                                     <%= post.title %>
                                 </h3>
                                 <p class="div-post-para">
                                     <%= post.para %>
                                 </p>
-                                <a class="edit-icon-btn btn" href="/update/<%= post._id %>" role="button">
-                                    <iconify-icon icon="ic:baseline-edit"></iconify-icon>
-                                </a>
+                                <div>
+                                    <button class="button btn-danger close-icon-btn btn" type="submit" formaction="/delete/<%= post._id %>">
+                                    Delete
+                                    </button>
+                                    <a class="button btn-primary edit-icon-btn btn" href="/update/<%= post._id %>" role="button">
+                                    Edit
+                                    </a>
+                                </div>
                             </form>
                         </div>
                     <% }) %>
@@ -28,7 +30,7 @@
             </div>
         </div>
         <div class="" id="div-create-post">
-            <a class="btn " id="post-btn" href="/post" role="button">+&nbsp;Create Post</a>
+            <a class="btn btn-dark" id="create-post-btn" href="/post" role="button">+&nbsp;Create Post</a>
         </div>
     </div>
 </div>
