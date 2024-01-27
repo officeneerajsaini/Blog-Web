@@ -53,6 +53,7 @@ body {
 }
 #create-post-btn {
     /* background-color: #ffffff; */
+    bottom: 1px;
 }
 .div3{
     display: flex;
